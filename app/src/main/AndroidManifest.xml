@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="indra.com.icertify">
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission. ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-feature android:name="android.hardware.location.gps" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <service
+            android:name=".activities.service.domain.ConnService"
+            android:enabled="true"
+            android:exported="false" >
+        </service>
+        <service
+            android:name=".activities.service.ServiceManager"
+            android:enabled="true"
+            android:exported="false" >
+        </service>
+        <service
+            android:name=".activities.service.GPSTracker"
+            android:enabled="true"
+            android:exported="true"></service>
+
+        <activity
+            android:name=".activities.SophiaMainActivity"
+            android:label="@string/title_activity_sophia_main"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".activities.main.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.login.LoginActivity"
+            android:label="@string/title_activity_login" />
+        <activity android:name=".activities.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.ricerca_certificazioni.RicercaCertificazioniActivity"
+            android:label="@string/title_activity_ricerca_certificazioni"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.ricerca_certificazioni.RisultatoRicercaCertificazioniActivity"
+            android:label="@string/title_activity_risultato_ricerca_certificazioni"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.ricerca_certificazioni.DettaglioCertificazioneActivity"
+            android:label="@string/title_activity_dettaglio_certificazione"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.ricerca_certificazioni_scadute.RicercaCertificazioniScaduteActivity"
+            android:label="@string/title_activity_ricerca_certificazioni_scadute"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.ricerca_certificazioni_scadute.RisultatoRicercaCertificazioniScaduteActivity"
+            android:label="@string/title_activity_risultato_ricerca_certificazioni_scadute"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <receiver android:name=".activities.service.alert.signal.ConnAlarmSignal"/>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+    <ImageView
+        android:id="@+id/id_image_tipo_certificazione"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/ic_menu_camera"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_menu_camera"/>
+
+    <TextView
+        android:id="@+id/id_nome_certificazione"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Scrum Master - Scrum Study - SMC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/id_image_tipo_certificazione"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/id_data_certificazione"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="10 Feb 2017"
+        app:layout_constraintStart_toEndOf="@+id/id_image_tipo_certificazione"
+        app:layout_constraintTop_toBottomOf="@+id/id_nome_certificazione"/>
+
+    <TextView
+        android:id="@+id/id_nominativo_certificazione"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/id_data_certificazione"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/id_data_certificazione"
+        app:layout_constraintTop_toBottomOf="@+id/id_nome_certificazione"/>
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="20 Mar 2017"
+        app:layout_constraintStart_toEndOf="@+id/id_image_tipo_certificazione"
+        app:layout_constraintTop_toBottomOf="@+id/id_data_certificazione"/>
+
+</android.support.constraint.ConstraintLayout>
